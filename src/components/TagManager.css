@@ -1,5 +1,13 @@
 .singleTagBox {
     display: flex;
     flex-direction: row;
-    margin: 5px;
+    margin: 10px;
+}
+.TagManagerBox {
+    display: flex;
+    flex-direction: column;
+}
+.createTagForm {
+    display: flex;
+    flex-direction: column;
 }
