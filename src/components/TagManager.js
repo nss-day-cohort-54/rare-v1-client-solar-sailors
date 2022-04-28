@@ -5,16 +5,20 @@ import "./TagManager.css";
 export const TagManager = () => {
     const [tags, changeTags] = useState([]);
     const [sortedTags, setSortedTags] = useState([]);
+    const [tag, updateTag] = useState({label:""})
     const history = useHistory()
 
-
-useEffect(() => {
+const getTags = () => {
     fetch("http://localhost:8088/tags")
     .then((res) => res.json())
     .then((tagsFromAPI) => {
     changeTags(tagsFromAPI);
     });
+}
+useEffect(() => {
+    getTags()
 }, []);
+
 
 useEffect(() => {
     setSortedTags(
@@ -47,7 +51,8 @@ const fetchOption = {
 
 return fetch("http://localhost:8088/tags", fetchOption)
         .then(() => {
-            history.push(`/tags}`)
+            getTags().then(()=> history.push(`/tagmanager`) )
+            
         })
 }
 return (
@@ -67,6 +72,13 @@ return (
     <fieldset >
         <div>Create Tag</div>
         <input
+        onChange={
+            (evt) => {
+                let copy = {...tag}
+                copy.label = evt.target.value
+                updateTag(copy)
+            }
+        }
         required autoFocus
         type="text"
         placeholder="Type Tag Here"
