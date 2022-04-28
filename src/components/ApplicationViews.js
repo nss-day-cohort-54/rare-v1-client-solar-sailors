@@ -29,7 +29,7 @@ export const ApplicationViews = () => {
             <Route exact path="/tagmanager">
                 
                 <TagManager/>
-                
+
             </Route>
 
             

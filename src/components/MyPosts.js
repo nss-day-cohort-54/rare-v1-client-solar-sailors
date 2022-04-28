@@ -1,1 +1,8 @@
-export const MyPosts = () => {}
+export const MyPosts = () => {
+
+    return (
+        <>
+        
+        </>
+    )
+}

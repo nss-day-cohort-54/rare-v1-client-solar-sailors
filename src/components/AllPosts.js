@@ -1,1 +1,8 @@
-export const AllPosts = () => {}
+export const AllPosts = () => {
+
+    return (
+        <>
+        
+        </>
+    )
+}
