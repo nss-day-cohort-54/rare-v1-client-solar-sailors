@@ -1,1 +1,8 @@
-export const CategoryManager = () => {}
+export const CategoryManager = () => {
+
+    return (
+        <>
+        
+        </>
+    )
+}
