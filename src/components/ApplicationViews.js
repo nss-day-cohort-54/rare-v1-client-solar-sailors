@@ -1,7 +1,7 @@
 import React from "react"
 import { Route } from "react-router-dom"
 import { AllPosts } from "./AllPosts"
-import { CategoryManager } from "./CategoryManager"
+import { CategoryManager } from "./category/CategoryManager"
 import { MyPosts } from "./MyPosts"
 import { Post } from "./Post"
 import { TagManager } from "./TagManager"
@@ -33,9 +33,9 @@ export const ApplicationViews = () => {
                 
             </Route>
 
-            <Route exact path="/categorymanager">
+            <Route exact path="/categories">
                 
-                <CategoryManager/>
+                <CategoryManager />
                 
             </Route>
 
